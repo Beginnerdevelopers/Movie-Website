@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --main-color: #ff2c1f;
+  --text-color: #020307;
+  --bg-color: #fff;
+}
+body {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  transition: 0.5s;
+  z-index: 1000;
+  /* background: var(--main-color); */
+}
+section {
+  padding: 4.5rem 0 1.5rem;
+}
+.logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.logo .bx {
+  font-size: 24px;
+  color: var(--main-color);
+}
+.navbar {
+  display: flex;
+  column-gap: 5rem;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-color);
+  position: relative;
+  text-decoration: none;
+}
+.navbar a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s all linear;
+}
+.navbar a:hover::after,
+.navbar .home_active::after {
+  width: 100%;
+}
+#menu_icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000001;
+  display: none;
+}
+.btn {
+  padding: 0.7rem 1.4rem;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-weight: 400;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #c9362f;
+}
+.conatiner {
+  width: 100%;
+  min-height: 640px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgb(2, 3, 7, 0.4);
+}
+.conatiner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 0.2rem !important;
+  background: var(--bg-color) !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  width: 1.5rem !important;
+  background: var(--main-color) !important;
+}
+.home_text {
+  z-index: 1000;
+  padding: 0 150px;
+  margin-top: 130px;
+}
+.home_text span {
+  color: var(--bg-color);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.home_text h1 {
+  color: var(--bg-color);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.play {
+  bottom: 10%;
+  position: absolute;
+  right: 4rem;
+}
+.play .bx {
+  background: var(--bg-color);
+  padding: 10px;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: 4px solid rgb(2, 3, 7, 0.4);
+  color: var(--main-color);
+}
+.play .bx:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+  transition: 0.2s all linear;
+}
+.movies {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--main-color);
+}
+.movies_container {
+  width: 986px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.box .box_img {
+  width: 100%;
+  height: 270px;
+}
+.box .box_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box .box_img img:hover {
+  transform: translateY(-10px);
+  transition: 0.2s all linear;
+}
+.box h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.box span {
+  font-size: 13px;
+}
+.coming_container {
+  display: grid;
+  gap: 1rem;
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+.coming_container.box.box_img img:hover {
+  transform: translateY("0");
+}
+.coming_container .box {
+  width: 100px;
+}
+.swiper_wrapper {
+  width: 986px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
